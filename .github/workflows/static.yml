@@ -31,7 +31,7 @@ jobs:
       - name: Url
         run: |
           echo "Hello World"
-          echo "This is the ${{ env.PRIVATE_CLIENT_ID }} environment variable"
+          echo "This is the $env.PRIVATE_CLIENT_ID"
           echo "This is the $PRIVATE_CLIENT_ID environment variable"
           echo "This is the $PRIVATE_CLIENT_SECRET environment variable"
           echo "${{ env.WORKFLOW_VARIABLE == 'WORKFLOW' }}"
