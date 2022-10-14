@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exciting Activities</title>
+    <link rel="stylesheet" href="./css/category.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a class="logo" href="./"></a>
+        <div class="navigation">
+            <ul class="navbar-list">
+                <li class="navbar-list-item">
+                    <a href="/listItem.html?name=featured-activities"> 精彩活動 </a>
+                </li>
+                <li class="navbar-list-item">
+                    <a href="/listItem.html?name=attractions-around"> 全台景點 </a>
+                </li>
+                <li class="navbar-list-item">
+                    <a href="/listItem.html?name=explore-gourmet"> 探索美食 </a>
+                </li>
+                <li class="navbar-list-item">
+                    <a href="/listItem.html?name=accommodation-hotel"> 租宿飯店 </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <img id="banner-img" src="./images/featured-activities_banner.png" alt="exciting_activities_banner">
+        <span id="banner-text" class="banner-text">精彩活動</span>
+    </div>
+
+    <header class="header-wrapper">
+        <!-- <div class="search-box">
+            <i class="icon-search"></i>
+            <input class="search-box-input" type="search" name="" id="" placeholder="所有縣市">
+        </div> -->
+    </header>
+
+    <section class="content">
+        <div class="content-header">
+            <div class="content-header-list">
+                <a href="?name=featured-activities" id="featured-activities"
+                    class="content-header-list-item active">精選活動</a>
+                <a href="?name=attractions-around" id="attractions-around" class="content-header-list-item">各地景點</a>
+                <a href="?name=explore-gourmet" id="explore-gourmet" class="content-header-list-item">探索美食</a>
+                <a href="?name=accommodation-hotel" id="accommodation-hotel" class="content-header-list-item">住宿飯店</a>
+            </div>
+            <div class="content-header-dropdown">
+                <!-- <div class="custom-dropdown">
+                    <div class="custom-dropdown-selected" id="toggle-1" onclick="dropdownFunc('toggle-1')">
+                        <span class="custom-dropdown-selected-text">主題分類</span>
+                    </div>
+                    <ul class="custom-dropdown-list" data-container="toggle-1">
+                        <li class="custom-dropdown-list-item">熱門活動</li>
+                        <li class="custom-dropdown-list-item">近期活動</li>
+                        <li class="custom-dropdown-list-item">傳統節慶</li>
+                        <li class="custom-dropdown-list-item">原住民活動</li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="content-body" id="contents-body" data-container="1">
+        </div>
+
+        <div class="content-footer">
+            <ul class="content-footer-list" id="pagination">
+            </ul>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-item">
+            Copyright@2021 Charles Sin TheF2E Homework
+        </div>
+    </footer>
+
+    <script src="./module/key.js"></script>
+    <script src="./javascript/jquery.min.js"></script>
+    <script src="./javascript/sha.js"></script>
+    <script src="./javascript/createElement.js"></script>
+    <script src="./javascript/query.js"></script>
+    <script src="./javascript/dropdown.js"></script>
+    <script type="module" src="./javascript/listItem.js"></script>
+</body>
+
+</html>

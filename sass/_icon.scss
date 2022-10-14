@@ -1,0 +1,61 @@
+i.icon {
+  &-search {
+    display: block;
+    background-image: url("../images/bx_bx-search.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 31px;
+    height: 31px;
+  }
+
+  &-lantern {
+    display: block;
+    background-image: url("../images/exciting_activities.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 48px;
+    height: 48px;
+  }
+
+  &-city-gate {
+    display: block;
+    background-image: url("../images/popular_destination.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 68px;
+    height: 76px;
+  }
+
+  &-bubble-tea {
+    display: block;
+    background-image: url("../images/recommended_food.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 47px;
+    height: 76px;
+  }
+
+  &-google-maps-pin {
+    display: block;
+    background-image: url("../images/logos_google-maps.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 14px;
+    height: 20px;
+  }
+
+  &-like {
+    display: block;
+    background-image: url("../images/ic_recommend.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 34px;
+    height: 34px;
+  }
+}
