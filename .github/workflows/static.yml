@@ -28,6 +28,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Url
+        run: |
+          cd module && echo -e "const PRIVATE_CLIENT_ID = 'secrets.PRIVATE_CLIENT_ID';\n\nconst PRIVATE_CLIENT_SECRET = 'secrets.PRIVATE_CLIENT_SECRET';" > key.js
+          echo "URL=${{ secrets.PRIVATE_CLIENT_ID }}"
+          echo ${{ secrets.REPO_ENV_SECRET }}
+          echo ${{ secrets.PRIVATE_CLIENT_ID }}
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
@@ -40,9 +46,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-      - name: Url
-        run: |
-          cd module && echo -e "const PRIVATE_CLIENT_ID = 'secrets.PRIVATE_CLIENT_ID';\n\nconst PRIVATE_CLIENT_SECRET = 'secrets.PRIVATE_CLIENT_SECRET';" > key.js
-          echo "URL=${{ secrets.PRIVATE_CLIENT_ID }}"
-          echo ${{ secrets.REPO_ENV_SECRET }}
-          echo ${{ secrets.PRIVATE_CLIENT_ID }}
