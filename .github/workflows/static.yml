@@ -34,6 +34,8 @@ jobs:
           echo "URL=${{ secrets.PRIVATE_CLIENT_ID }}"
           echo ${{ secrets.REPO_ENV_SECRET }}
           echo ${{ secrets.PRIVATE_CLIENT_ID }}
+          echo "This is the $PRIVATE_CLIENT_ID environment"
+          echo "This is the $PRIVATE_CLIENT_SECRET environment"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
