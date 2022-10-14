@@ -10,7 +10,8 @@ on:
   workflow_dispatch:
 
 env:
-  PRIVATE_CLIENT_ID: WORKFLOW
+  PRIVATE_CLIENT_ID: charlessin1993-085f5f95-9142-8a32
+  PRIVATE_CLIENT_SECRET: charlessin1993-085f5f95-9142-8a32
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -31,13 +32,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Url
-        run: |
-          echo "Hello World"
-          echo "This is the $env.PRIVATE_CLIENT_ID"
-          echo "This is the $PRIVATE_CLIENT_ID environment variable"
-          echo "This is the $PRIVATE_CLIENT_SECRET environment variable"
-          echo "${{ env.WORKFLOW_VARIABLE == 'WORKFLOW' }}"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
@@ -47,6 +41,10 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+      - name: Url
+        run: |
+          echo "Hello World"
+          cd ./module && echo -e "const TOKEN = 'api-token';\n\nexport default TOKEN;" > key.js
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
