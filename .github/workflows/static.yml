@@ -31,6 +31,7 @@ jobs:
       - name: Url
         run: |
           echo "Hello World"
+          echo "step: ${{ steps.deployment.outputs.page_url }}"
           echo "This is the $env.PRIVATE_CLIENT_ID"
           echo "This is the $PRIVATE_CLIENT_ID environment variable"
           echo "This is the $PRIVATE_CLIENT_SECRET environment variable"
