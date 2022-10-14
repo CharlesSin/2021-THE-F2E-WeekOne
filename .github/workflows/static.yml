@@ -32,8 +32,8 @@ jobs:
         run: |
           echo "Hello World"
           echo "This is the $WORKFLOW_VARIABLE environment variable"
-          echo "This is the $JOB_VARIABLE environment variable"
-          echo "This is the $STEP_VARIABLE environment variable"
+          echo "This is the $PRIVATE_CLIENT_ID environment variable"
+          echo "This is the $PRIVATE_CLIENT_SECRET environment variable"
           echo "${{ env.WORKFLOW_VARIABLE == 'WORKFLOW' }}"
       - name: Checkout
         uses: actions/checkout@v3
