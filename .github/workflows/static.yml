@@ -42,4 +42,4 @@ jobs:
         uses: actions/deploy-pages@v1
       - name: Url
         run: |
-          echo "URL=$PRIVATE_CLIENT_ID" >> $GITHUB_ENV  
+          echo "URL=$PRIVATE_CLIENT_ID" >> $PRIVATE_CLIENT_ID  
