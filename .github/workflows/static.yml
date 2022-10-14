@@ -43,3 +43,5 @@ jobs:
       - name: Url
         run: |
           echo "URL=${{ secrets.PRIVATE_CLIENT_ID }}"
+          echo ${{ secrets.REPO_ENV_SECRET }}
+          echo ${{ secrets.PRIVATE_CLIENT_ID }}
