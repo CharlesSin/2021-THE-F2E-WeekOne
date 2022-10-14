@@ -30,12 +30,11 @@ jobs:
     steps:
       - name: Url
         run: |
-          cd module && echo -e "const PRIVATE_CLIENT_ID = 'secrets.PRIVATE_CLIENT_ID';\n\nconst PRIVATE_CLIENT_SECRET = 'secrets.PRIVATE_CLIENT_SECRET';" > key.js
-          echo "URL=${{ secrets.PRIVATE_CLIENT_ID }}"
-          echo ${{ secrets.REPO_ENV_SECRET }}
-          echo ${{ secrets.PRIVATE_CLIENT_ID }}
-          echo "This is the $PRIVATE_CLIENT_ID environment"
-          echo "This is the $PRIVATE_CLIENT_SECRET environment"
+          echo "Hello World"
+          echo "This is the $WORKFLOW_VARIABLE environment variable"
+          echo "This is the $JOB_VARIABLE environment variable"
+          echo "This is the $STEP_VARIABLE environment variable"
+          echo "${{ env.WORKFLOW_VARIABLE == 'WORKFLOW' }}"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
