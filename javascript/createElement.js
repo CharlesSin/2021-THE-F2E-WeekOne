@@ -8,7 +8,8 @@ function dynamicCreateElement(tagName, classification) {
 function dynamicCreateImgElement(source, alt) {
   const imgElement = document.createElement("img");
   imgElement.src = source;
-  imgElement.aly = alt;
+  imgElement.alt = alt;
+  imgElement.setAttribute('loading', 'lazy');
 
   return imgElement;
 }

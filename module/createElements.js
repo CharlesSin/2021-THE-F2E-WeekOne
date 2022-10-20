@@ -44,7 +44,7 @@ export function createCard(data) {
   return /*html*/ `
       <div class="horizontal-card">
         <div class="horizontal-card-image">
-            <img src="${PictureUrl1}" alt="${PictureDescription1}">
+            <img src="${PictureUrl1}" alt="${PictureDescription1}" loading="lazy">
         </div>
         <div class="horizontal-card-info">
             <div class="horizontal-card-info-title debugger">${
